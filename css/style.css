@@ -1,0 +1,183 @@
+body {
+    margin: 0;
+    background-color: rgb(172, 176, 180);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width: 800px;
+    max-height: 700px; 
+    overflow-y: auto; 
+    position: relative;
+    left: 25%;
+    top: 63px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.add-button {
+    background: rgba(0, 174, 28, 1);
+    color: white;
+    border-radius: 8px;
+    position: absolute;
+    top: 10px;
+    right: 8%;
+    width: 80px;
+    height: 36px;
+}
+
+.pencil-button,
+.delete-button,
+.save-button {
+    display: none;
+    height: 18px;
+}
+
+.card:hover .pencil-button,
+.card:hover .delete-button,
+.card:hover .save-button {
+    display: inline-block;
+    background: rgba(239, 239, 239, 1);
+}
+
+.card:hover {
+    background: rgba(239, 239, 239, 1);
+}
+
+.card p:hover {
+    background: rgba(239, 239, 239, 1);
+}
+
+input[type="text"] {
+    width: 620px;
+    padding: 20px 0;
+    border: none;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.card {
+    display: flex;
+    width: 688px;
+    align-items: center;
+    padding: 10px;
+    border: 1px;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.add {
+    display: flex;
+    width: 785px;
+    box-shadow: 0px 1px 0px 0px rgba(222, 223, 229, 1);
+    justify-content: center;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    border: 1px solid rgb(161, 160, 163);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background: rgba(0, 174, 28, 1);
+    border-color: rgba(0, 174, 28, 1);
+}
+
+input[type="checkbox"]::before {
+    content: '\2713';
+    font-size: 14px;
+    color: white;
+    position: relative;
+    top: -3px;
+    transition: opacity 0.3s;
+    left: 1px;
+}
+
+input[type="checkbox"]:checked + p {
+    text-decoration: line-through;
+}
+
+
+.add-button:hover {
+    background: rgb(3, 155, 28);
+    transition: .3s;
+}
+
+button {
+    border: none;
+    background: white;
+    cursor: pointer;
+}
+
+.card p {
+    word-wrap: break-word;
+    flex: 1;
+    width: 612px;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.30000001192092896px;
+    text-align: left;
+}
+
+.clear-all {
+    position: relative;
+    width: 300px;
+    height: 36px;
+    border: 1px solid rgba(222, 223, 229, 1);
+    border-radius: 8px;
+    left: 40%;
+    top: 93px;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.30000001192092896px;  
+    cursor: pointer;
+}
+
+.clear-all img {
+    position: relative;
+    top: 2px;
+    left: -6px;
+}
+
+.clear-all:hover {
+    background-color: rgb(208, 210, 212);
+    transition: .3s;
+}
+
+.card .pencil-button img:hover,
+.card .delete-button img:hover {
+    width: 18px;
+    height: 18px;
+    pointer-events: none; 
+} 
+
+.pencil-button img,
+.delete-button img,
+.save-button img {
+    width: 18px;
+    height: 18px;
+}
+
+.pencil-button,
+.delete-button {
+    opacity: .5;
+}
